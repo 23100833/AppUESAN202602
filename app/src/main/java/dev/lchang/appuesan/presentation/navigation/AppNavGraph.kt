@@ -11,6 +11,7 @@ import dev.lchang.appuesan.presentation.home.HomeScreen
 import dev.lchang.appuesan.presentation.permissions.GalleryPermissionsScreen
 import dev.lchang.appuesan.presentation.realtime.FirestoreRealtimeScreen
 import dev.lchang.appuesan.presentation.supabase.SupabaseStorageScreen
+import dev.lchang.appuesan.presentation.favorites.FavoritesScreen
 
 @Composable
 fun AppNavGraph(){
@@ -44,6 +45,11 @@ fun AppNavGraph(){
         composable("apifootball") {
             DrawerScaffold(navController) {
                 ApiFootballScreen()
+            }
+        }
+        composable("favorites") {
+            DrawerScaffold(navController) {
+                FavoritesScreen()
             }
         }
     }
